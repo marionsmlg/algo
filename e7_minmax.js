@@ -12,9 +12,9 @@
 let args = process.argv.slice(2);
 let arg1 = args[0];
 let arg2 = args[1];
-let arr = [];
 
 function middleNumbers(x, y) {
+  let arr = [];
   if (!isNaN(arg1) && !isNaN(arg2)) {
     for (let i = x; i <= y; i++) {
       arr.push(i);
