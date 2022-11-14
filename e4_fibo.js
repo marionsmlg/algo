@@ -24,4 +24,4 @@ function fibo(n) {
   }
   return somme;
 }
-console.log(fibo(15));
+console.log(fibo(args));
