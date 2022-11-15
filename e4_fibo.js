@@ -12,8 +12,12 @@
 // 610
 
 let args = process.argv.slice(2);
+let inputArg = args[0];
 
 function fibo(n) {
+  if (isNaN(n) || n < 0) {
+    return -1;
+  }
   let nb1 = 0;
   let nb2 = 1;
   let somme = 1;
@@ -24,4 +28,4 @@ function fibo(n) {
   }
   return somme;
 }
-console.log(fibo(args));
+console.log(fibo(inputArg));
