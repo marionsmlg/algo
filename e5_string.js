@@ -15,7 +15,7 @@ let arg1 = args[0];
 let arg2 = args[1];
 
 function includesString(str1, str2) {
-  if (args.length !== 2) {
+  if (!str2) {
     return "error";
   }
   if (str1.includes(str2)) {
