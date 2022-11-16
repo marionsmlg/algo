@@ -15,7 +15,7 @@ let arg2 = args[1];
 
 function middleNumbers(x, y) {
   let arr = [];
-  if (!isNaN(arg1) && !isNaN(arg2)) {
+  if (!isNaN(x) && !isNaN(y)) {
     for (let i = x; i <= y; i++) {
       arr.push(i);
     }
