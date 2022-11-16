@@ -10,16 +10,12 @@
 // false
 
 let args = process.argv.slice(2);
+let inputArg = String(args);
 
 function hasNumber(str) {
-  if (str.length > 1) {
-    return false;
+  if (!isNaN(str)) {
+    return true;
   }
-  for (let i = 0; i <= str.length; i++) {
-    if (!isNaN(str[i])) {
-      return true;
-    }
-    return false;
-  }
+  return false;
 }
-console.log(hasNumber(args));
+console.log(hasNumber(inputArg));
