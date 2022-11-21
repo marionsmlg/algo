@@ -9,15 +9,12 @@
 let args = process.argv.slice(2);
 
 function mergeSortedListOfNb(arr) {
-  function byValue(a, b) {
-    return a - b;
-  }
   if (arr.includes("fusion")) {
     let arr1 = arr.slice(0, arr.indexOf("fusion"));
     let arr2 = arr.slice(arr.indexOf("fusion") + 1, arr.length);
     let finalArr = arr1.concat(arr2);
 
-    return finalArr.sort(byValue).join(" ");
+    return finalArr.sort((a, b) => a - b).join(" ");
   }
 
   return "erreur, le mot clé 'fusion' est manquant";
