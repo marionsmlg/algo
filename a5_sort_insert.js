@@ -13,9 +13,6 @@
 let args = process.argv.slice(2);
 
 function insertAndSort(arr) {
-  function byValue(a, b) {
-    return a - b;
-  }
   let newNbToAdd = arr.pop();
   if (isNaN(newNbToAdd)) {
     return "erreur";
@@ -23,7 +20,7 @@ function insertAndSort(arr) {
 
   arr.push(newNbToAdd);
 
-  return arr.sort(byValue).join(" ");
+  return arr.sort((a, b) => a - b).join(" ");
 }
 
 console.log(insertAndSort(args));
