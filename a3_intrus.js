@@ -27,3 +27,13 @@ function hasIntruder(arr) {
   return "Aucun intrus détecté";
 }
 console.log(hasIntruder(args));
+
+// function hasIntruder(arr) {
+//     let intruder = arr.find((x) => arr.indexOf(x) === arr.lastIndexOf(x));
+//     if (intruder === undefined) {
+//       return "Aucun intrus détecté";
+//     }
+
+//     return `Intrus détecté: ${intruder}`;
+//   }
+//   console.log(hasIntruder(arr));
