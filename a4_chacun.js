@@ -13,19 +13,20 @@
 // erreur, l'élément 'oui' n'est pas un élément valide de la liste
 
 let args = process.argv.slice(2);
+let arr = args.slice(0, args.length - 1);
+let operator = args[args.length - 1];
 
-function addOrSubForEach(arr) {
+function addOrSubForEach(arr, operator) {
   let newArray = [];
-  let sign = arr.pop();
-  if (sign.includes("-") || sign.includes("+")) {
+  if (operator.includes("-") || operator.includes("+")) {
     for (let i = 0; i < arr.length; i++) {
       if (isNaN(arr[i])) {
         return `erreur, l'élément '${arr[i]}' n'est pas un élément valide de la liste`;
       }
-      newArray.push(Number(arr[i]) + Number(sign));
+      newArray.push(Number(arr[i]) + Number(operator));
     }
     return newArray.join(" ");
   }
   return "erreur, il manque le signe de l'opération à effectuer";
 }
-console.log(addOrSubForEach(args));
+console.log(addOrSubForEach(args, operator));
