@@ -11,16 +11,16 @@
 // erreur
 
 let args = process.argv.slice(2);
+let arr = args.slice(0, args.length - 1);
+let nbToAdd = args[args.length - 1];
 
-function insertAndSort(arr) {
-  let newNbToAdd = arr.pop();
-  if (isNaN(newNbToAdd)) {
+function insertAndSort(arr, nbToAdd) {
+  if (isNaN(nbToAdd)) {
     return "erreur";
   }
-
-  arr.push(newNbToAdd);
+  arr.push(nbToAdd);
 
   return arr.sort((a, b) => a - b).join(" ");
 }
 
-console.log(insertAndSort(args));
+console.log(insertAndSort(args, nbToAdd));
