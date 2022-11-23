@@ -9,31 +9,32 @@
 // $ node a3_intrus.js 1 2 1 2
 // Aucun intrus détecté
 
-let args = process.argv.slice(2);
-
 // function isSingle(arr) {
-//   return arr.find((x) => arr.indexOf(x) === arr.lastIndexOf(x));
+//   return arr.find((str) => arr.indexOf(str) === arr.lastIndexOf(str));
 // }
 
-function isSingle(arr) {
-  return arr.some((x) => arr.indexOf(x) === arr.lastIndexOf(x));
-}
-
-function hasIntruder(arr) {
-  let intruder = arr.find((x) => arr.indexOf(x) === arr.lastIndexOf(x));
-  if (isSingle(arr)) {
-    return `Intrus détecté: ${intruder}`;
-  }
-  return "Aucun intrus détecté";
-}
-console.log(hasIntruder(args));
+// function isSingle(arr) {
+//   return arr.some((str) => arr.indexOf(str) === arr.lastIndexOf(str));
+// }
 
 // function hasIntruder(arr) {
-//     let intruder = arr.find((x) => arr.indexOf(x) === arr.lastIndexOf(x));
-//     if (intruder === undefined) {
-//       return "Aucun intrus détecté";
-//     }
-
+//   let intruder = arr.find((str) => arr.indexOf(str) === arr.lastIndexOf(str));
+//   if (isSingle(arr)) {
 //     return `Intrus détecté: ${intruder}`;
 //   }
-//   console.log(hasIntruder(arr));
+//   return "Aucun intrus détecté";
+// }
+// console.log(hasIntruder(args));
+
+let args = process.argv.slice(2);
+
+function hasIntruder(arr) {
+  let intruder = arr.find((str) => arr.indexOf(str) === arr.lastIndexOf(str));
+  return intruder;
+}
+
+if (hasIntruder(args) === undefined) {
+  console.log("Aucun intrus détecté");
+} else {
+  console.log(`Intrus détecté: ${hasIntruder(args)}`);
+}
