@@ -5,18 +5,18 @@
 // Les...boomers...les...points...de...suspension
 
 let args = process.argv.slice(2);
+let arr = args.slice(0, args.length - 1);
+let separator = args[args.length - 1];
 
-function concat(arr) {
-  let separator = arr.pop();
-  let newArray = [];
+function concat(arr, separator) {
+  let finalStr = "";
   for (let i = 0; i < arr.length; i++) {
     if (i !== arr.length - 1) {
-      newArray.push(`${arr[i]}${separator}`);
-    }
-    if (i === arr.length - 1) {
-      newArray.push(`${arr[i]}`);
+      finalStr += `${arr[i]}${separator}`;
+    } else {
+      finalStr += `${arr[i]}`;
     }
   }
-  return newArray.join("");
+  return finalStr;
 }
-console.log(concat(args));
+console.log(concat(arr, separator));
