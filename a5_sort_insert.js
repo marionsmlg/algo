@@ -23,4 +23,4 @@ function insertAndSort(arr, nbToAdd) {
   return arr.sort((a, b) => a - b).join(" ");
 }
 
-console.log(insertAndSort(args, nbToAdd));
+console.log(insertAndSort(arr, nbToAdd));
