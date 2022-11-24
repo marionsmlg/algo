@@ -18,15 +18,15 @@ let operator = args[args.length - 1];
 
 function addOrSubForEach(arr, operator) {
   let newArray = [];
-  if (operator.includes("-") || operator.includes("+")) {
-    for (let i = 0; i < arr.length; i++) {
-      if (isNaN(arr[i])) {
-        return `erreur, l'élément '${arr[i]}' n'est pas un élément valide de la liste`;
-      }
-      newArray.push(Number(arr[i]) + Number(operator));
-    }
-    return newArray.join(" ");
+  if (!operator.includes("-") && !operator.includes("+")) {
+    return "erreur, il manque le signe de l'opération à effectuer";
   }
-  return "erreur, il manque le signe de l'opération à effectuer";
+  for (let i = 0; i < arr.length; i++) {
+    if (isNaN(arr[i])) {
+      return `erreur, l'élément '${arr[i]}' n'est pas un élément valide de la liste`;
+    }
+    newArray.push(Number(arr[i]) + Number(operator));
+  }
+  return newArray.join(" ");
 }
-console.log(addOrSubForEach(args, operator));
+console.log(addOrSubForEach(arr, operator));
