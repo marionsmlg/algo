@@ -17,13 +17,13 @@ let args = process.argv.slice(2);
 let char = args[0];
 let nbFloors = args[1];
 
-function pyramide(char, nbFloors) {
+function pyramid(char, nbFloors) {
   for (let i = 1; i <= nbFloors; i++) {
     let nbSpace = " ".repeat(nbFloors - i);
     let nbChar = char.repeat(i * 2 - 1);
-    let pyramide = nbSpace + nbChar;
-    console.log(pyramide);
+    let finalResult = nbSpace + nbChar;
+    console.log(finalResult);
   }
 }
 
-console.log(pyramide(char, nbFloors));
+console.log(pyramid(char, nbFloors));
