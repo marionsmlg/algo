@@ -9,8 +9,9 @@
 // $ node f2_read.js pere_noel.txt
 // Erreur: le fichier 'pere_noel.txt' n'existe pas
 
+let args = process.argv.slice(2);
 const fs = require("fs");
-const file = "f1_new.txt";
+const file = args[0];
 
 fs.readFile(file, "utf8", function (err, data) {
   const content = data;
