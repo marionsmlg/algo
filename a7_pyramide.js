@@ -17,20 +17,22 @@ let args = process.argv.slice(2);
 let char = args[0];
 let nbFloors = args[1];
 
-// function pyramid(char, nbFloors) {
-//   for (let i = 1; i <= nbFloors; i++) {
-//     let nbSpace = " ".repeat(nbFloors - i);
-//     let nbChar = char.repeat(i * 2 - 1);
-//     let finalResult = nbSpace + nbChar;
-//     console.log(finalResult);
-//   }
-// }
-
-// console.log(pyramid(char, nbFloors));
-
-for (let i = 1; i <= nbFloors; i++) {
-  let nbSpace = " ".repeat(nbFloors - i);
-  let nbChar = char.repeat(i * 2 - 1);
-  let finalResult = nbSpace + nbChar;
-  console.log(finalResult);
+function pyramid(char, nbFloors) {
+  let arr = [];
+  for (let i = 1; i <= nbFloors; i++) {
+    let nbSpace = " ".repeat(nbFloors - i);
+    let nbChar = char.repeat(i * 2 - 1);
+    let finalResult = nbSpace + nbChar;
+    arr.push(finalResult);
+  }
+  return arr;
 }
+
+console.log(pyramid(char, nbFloors).join("\n"));
+
+// for (let i = 1; i <= nbFloors; i++) {
+//   let nbSpace = " ".repeat(nbFloors - i);
+//   let nbChar = char.repeat(i * 2 - 1);
+//   let finalResult = nbSpace + nbChar;
+//   console.log(finalResult);
+// }
