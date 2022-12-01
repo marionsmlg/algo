@@ -7,7 +7,7 @@
 //     console.log(String.fromCharCode(index))
 // }
 
-// //corection
+// //correction
 // //let char = 97
 // for (let i = 0; i < 26; i++) {
 //     console.log(String.fromCharCode(char + i ));

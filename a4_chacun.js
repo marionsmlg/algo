@@ -18,7 +18,7 @@ let operator = args[args.length - 1];
 
 function addOrSubForEach(arr, operator) {
   let newArray = [];
-  if (!operator.includes("-") && !operator.includes("+")) {
+  if (!operator.startsWith("-") && !operator.startsWith("+")) {
     return "erreur, il manque le signe de l'opération à effectuer";
   }
   for (let i = 0; i < arr.length; i++) {

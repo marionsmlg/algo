@@ -28,13 +28,13 @@
 
 let args = process.argv.slice(2);
 
-function hasIntruder(arr) {
+function getIntruder(arr) {
   let intruder = arr.find((str) => arr.indexOf(str) === arr.lastIndexOf(str));
   return intruder;
 }
 
-if (hasIntruder(args) === undefined) {
+if (getIntruder(args) === undefined) {
   console.log("Aucun intrus détecté");
 } else {
-  console.log(`Intrus détecté: ${hasIntruder(args)}`);
+  console.log(`Intrus détecté: ${gerIntruder(args)}`);
 }

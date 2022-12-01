@@ -11,24 +11,45 @@
 // les
 // amis
 
-let args = process.argv.slice(2);
-let str = "Salut les amis";
-let separator = " ";
-
-function split(str, separator) {
-  let arr = [];
-  for (let i = 0; i < str.length; i++) {
-    j = str.indexOf(separator) - i;
-
+function getAllIndexSeparator(str, separator) {
+  let arrOfIndex = [];
+  for (let i = 0; i <= str.length; i++) {
     if (str[i] === separator) {
-      arr.push(str.slice(0, i));
-    }
-    if (str[i] === separator && j !== 0) {
-      arr.push(str.slice(i - 3, j - 1));
-      arr.push(str.slice(i + 1));
+      arrOfIndex.push(i);
     }
   }
-  return arr;
+  return arrOfIndex;
 }
 
-console.log(split(str, " "));
+function mySplit(str, separator) {
+  let arrOfIndexSeparator = getAllIndexSeparator(str, separator);
+  let finalArr = [];
+  if (separator === "") {
+    for (let j = 0; j < str.length; j++) {
+      finalArr.push(str[j]);
+    }
+    return finalArr;
+  } else {
+    finalArr.push(str.slice(0, str.indexOf(separator)));
+
+    for (let i = 0; i < arrOfIndexSeparator.length; i++) {
+      finalArr.push(
+        str.slice(arrOfIndexSeparator[i] + 1, arrOfIndexSeparator[i + 1])
+      );
+    }
+    return finalArr;
+  }
+}
+
+let args = process.argv.slice(2);
+let strInArgs = args.join(" ");
+
+function showMySplit(str) {
+  let finalArr = [];
+  let arrOfstrSplited = mySplit(str, " ");
+  for (let i = 0; i < arrOfstrSplited.length; i++) {
+    finalArr.push(arrOfstrSplited[i]);
+  }
+  return finalArr;
+}
+console.log(showMySplit(strInArgs).join("\n"));

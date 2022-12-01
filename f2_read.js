@@ -15,9 +15,9 @@ const file = args[0];
 
 fs.readFile(file, "utf8", function (err, data) {
   const content = data;
-  if (content === undefined) {
+  if (err) {
     console.log(`Erreur: le fichier '${file}' n'existe pas`);
-  } else {
-    console.log(content);
+    return;
   }
+  console.log(content);
 });
