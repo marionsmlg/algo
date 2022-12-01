@@ -40,6 +40,7 @@ function mySplit(str, separator) {
     return finalArr;
   }
 }
+// console.log(mySplit("Bonjour les amis", " "));
 
 let args = process.argv.slice(2);
 let strInArgs = args.join(" ");
