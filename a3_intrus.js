@@ -36,5 +36,5 @@ function getIntruder(arr) {
 if (getIntruder(args) === undefined) {
   console.log("Aucun intrus détecté");
 } else {
-  console.log(`Intrus détecté: ${gerIntruder(args)}`);
+  console.log(`Intrus détecté: ${getIntruder(args)}`);
 }
