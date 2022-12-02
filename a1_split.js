@@ -29,7 +29,6 @@ function mySplit(str, separator) {
       str.slice(arrOfIndexSeparator[j] + 1, arrOfIndexSeparator[j + 1])
     );
   }
-
   return finalArr;
 }
 
@@ -47,3 +46,35 @@ function showMySplit(str) {
   return finalArr;
 }
 console.log(showMySplit(strInArgs).join("\n"));
+
+/// FIRST TRY
+
+// function getAllIndexSeparator(str, separator) {
+//   let arrOfIndex = [];
+//   for (let i = 0; i <= str.length; i++) {
+//     if (str[i] === separator) {
+//       arrOfIndex.push(i);
+//     }
+//   }
+//   return arrOfIndex;
+// }
+
+// function split(str, separator) {
+//   let arrOfIndexSeparator = getAllIndexSeparator(str, separator);
+//   let finalArr = [];
+//   if (separator === "") {
+//     for (let j = 0; j < str.length; j++) {
+//       finalArr.push(str[j]);
+//     }
+//     return finalArr;
+//   } else {
+//     finalArr.push(str.slice(0, str.indexOf(separator)));
+
+//     for (let i = 0; i < arrOfIndexSeparator.length; i++) {
+//       finalArr.push(
+//         str.slice(arrOfIndexSeparator[i] + 1, arrOfIndexSeparator[i + 1])
+//       );
+//     }
+//     return finalArr;
+//   }
+// }
