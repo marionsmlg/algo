@@ -39,7 +39,7 @@ const article1 = {
     time: "20h33",
   },
   author: "20 Minutes avec AFP",
-  "update date": {
+  updateDate: {
     day: 30,
     month: 11,
     year: 2022,
@@ -61,9 +61,9 @@ const article2 = {
   },
   author: {
     name: "Fabrice",
-    "last name": "Pouliquen",
+    lastName: "Pouliquen",
   },
-  "update date": {
+  updateDate: {
     day: 30,
     month: 11,
     year: 2022,
@@ -84,7 +84,7 @@ const article3 = {
   },
   author: {
     name: "Frederic",
-    "last name": "Brenon",
+    lastname: "Brenon",
   },
 };
 
@@ -102,9 +102,9 @@ const article4 = {
   },
   author: {
     name: "Elise",
-    "last name": "Martin",
+    lastName: "Martin",
   },
-  "update date": {
+  updateDate: {
     day: 18,
     month: 11,
     year: 2022,
@@ -127,7 +127,7 @@ const article5 = {
   },
   author: {
     name: "Anna",
-    "last name": "Geslin",
+    lastname: "Geslin",
   },
 };
 
