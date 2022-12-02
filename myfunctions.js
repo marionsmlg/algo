@@ -7,7 +7,6 @@ function getAllIndexSeparator(str, separator) {
   }
   return arrOfIndex;
 }
-console.log(getAllIndexSeparator(str, separator));
 
 function IsNaNInArr(arr) {
   for (let i = 0; i < arr.length; i++) {

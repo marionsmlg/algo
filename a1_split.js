@@ -11,35 +11,28 @@
 // les
 // amis
 
-function getAllIndexSeparator(str, separator) {
-  let arrOfIndex = [];
-  for (let i = 0; i <= str.length; i++) {
-    if (str[i] === separator) {
-      arrOfIndex.push(i);
-    }
-  }
-  return arrOfIndex;
-}
-
 function mySplit(str, separator) {
-  let arrOfIndexSeparator = getAllIndexSeparator(str, separator);
   let finalArr = [];
-  if (separator === "") {
-    for (let j = 0; j < str.length; j++) {
-      finalArr.push(str[j]);
+  let arrOfIndexSeparator = [];
+  for (let i = 0; i < str.length; i++) {
+    if (separator === "") {
+      finalArr.push(str[i]);
     }
-    return finalArr;
-  } else {
-    finalArr.push(str.slice(0, str.indexOf(separator)));
-
-    for (let i = 0; i < arrOfIndexSeparator.length; i++) {
-      finalArr.push(
-        str.slice(arrOfIndexSeparator[i] + 1, arrOfIndexSeparator[i + 1])
-      );
+    if (str[i] === separator) {
+      arrOfIndexSeparator.push(i);
     }
-    return finalArr;
   }
+  finalArr.push(str.slice(0, str.indexOf(separator)));
+
+  for (let j = 0; j < arrOfIndexSeparator.length; j++) {
+    finalArr.push(
+      str.slice(arrOfIndexSeparator[j] + 1, arrOfIndexSeparator[j + 1])
+    );
+  }
+
+  return finalArr;
 }
+
 // console.log(mySplit("Bonjour les amis", " "));
 
 let args = process.argv.slice(2);
