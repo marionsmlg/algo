@@ -11,13 +11,29 @@
 let args = process.argv.slice(2);
 let dateOfToday = args.join("");
 
-function dateOfTomorrow(dateOfToday) {
-  let arrOfdate = dateOfToday.split("-");
-  let dateOfTomorrow = {
-    day: Number(arrOfdate[0]) + 1,
-    month: arrOfdate[1],
-    year: arrOfdate[2],
-  };
-  return `${dateOfTomorrow.day}-${dateOfTomorrow.month}-${dateOfTomorrow.year}`;
+function addZero(n) {
+  if (n < 10) {
+    return "0" + n;
+  } else {
+    return n;
+  }
 }
-console.log(dateOfTomorrow("02-12-2022"));
+
+function getDateOfTomorrow(dateOfToday) {
+  const reverseDateOfToday = dateOfToday.split("-").reverse().join("-");
+  const currentDate = new Date(reverseDateOfToday);
+  currentDate.setDate(currentDate.getDate() + 1);
+
+  const currentDayOfMonth = currentDate.getDate();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+  const dateString =
+    addZero(currentDayOfMonth) +
+    "-" +
+    addZero(currentMonth + 1) +
+    "-" +
+    currentYear;
+
+  return dateString;
+}
+console.log(getDateOfTomorrow(dateOfToday));
