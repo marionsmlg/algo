@@ -24,16 +24,13 @@ function getDateOfTomorrow(dateOfToday) {
   const currentDate = new Date(reverseDateOfToday);
   currentDate.setDate(currentDate.getDate() + 1);
 
-  const currentDayOfMonth = currentDate.getDate();
-  const currentMonth = currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
-  const dateString =
-    addZero(currentDayOfMonth) +
-    "-" +
-    addZero(currentMonth + 1) +
-    "-" +
-    currentYear;
+  const dayOfMonth = currentDate.getDate();
+  const month = currentDate.getMonth();
+  const year = currentDate.getFullYear();
 
-  return dateString;
+  const dateOfTomorrow =
+    addZero(dayOfMonth) + "-" + addZero(month + 1) + "-" + year;
+
+  return dateOfTomorrow;
 }
 console.log(getDateOfTomorrow(dateOfToday));
