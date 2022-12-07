@@ -25,6 +25,7 @@
 // [(5 articles sous forme JSON)]
 
 const fs = require("fs");
+
 const article1 = {
   title:
     "La France « continue d’exporter des pesticides interdits », selon deux ONG",
@@ -32,20 +33,11 @@ const article1 = {
     "https://img.20mn.fr/yMKxQU0oSVu24XkAY9t9DSk/830x532_la-picoxystrobine-interdite-en-2017-represente-pres-de-40-de-ce-volume-photo-d-illustration",
   content:
     "Il y aurait de nombreuses « failles » dans les lois. La France a autorisé entre janvier et septembre 2022 l’exportation de près de 7.500 tonnes de pesticides interdits sur le territoire français, selon une enquête de deux ONG publiée ce mercredi. ",
-  date: {
-    day: 30,
-    month: 11,
-    year: 2022,
-    time: "20h33",
-  },
+  date: new Date("2022-11-30 20:33"),
   author: "20 Minutes avec AFP",
-  updateDate: {
-    day: 30,
-    month: 11,
-    year: 2022,
-    time: "20h39",
-  },
+  updateDate: new Date("2022-11-30 20:39"),
 };
+
 const article2 = {
   title:
     "Météo : Les 4 chiffres à retenir du bilan climatologique de la France en 2022",
@@ -53,35 +45,21 @@ const article2 = {
     "https://img.20mn.fr/Y7owBVk7RUOiFT91gvIKAik/960x614_view-of-the-garonne-river-with-the-pont-des-catalans-and-the-dome-of-the-chapelle-saint-joseph-de-la-grave-the-level-of-the-river-is-at-its-lowest-due-to-the-lack-of-rainfall-in-recent-months-which-is-developing-a-historic-drought-october-30-2022-toulouse-france-vue-sur-le-fleuve-la-garonne-avec-le-pont-des-catalans-et-le-dome-de-la-chapelle-saint-joseph-de-la-grave-le-niveau-du-fleuve-est-au-plus-bas-en-raison-du-manque-de-precipitations-depuis-ces-dernieres-mois-qui-developpe-une-secheresse-historique-30-octobre-2022-toulouse-france-scheiber-la4255-credit-fred-scheiber-sipa-2211011625-credit-fred-scheiber-sipa-2211011632",
   content:
     "Depuis trois ans, Météo-France dresse le bilan climatologique de l’année qui s'achève. Normalement, le rendez-vous est fixé à la presse courant décembre. Pas besoin d’attendre jusque-là cette fois-ci.",
-  date: {
-    day: 30,
-    month: 11,
-    year: 2022,
-    time: "17h24",
-  },
+  date: new Date("2022-11-30 17:24"),
   author: {
     name: "Fabrice",
     lastName: "Pouliquen",
   },
-  updateDate: {
-    day: 30,
-    month: 11,
-    year: 2022,
-    time: "18h40",
-  },
+  updateDate: new Date("2022-11-30 18:40"),
 };
+
 const article3 = {
   title: "Des océans dans l’espace ? « Ils sont bien plus gros que sur Terre »",
   illustration:
     "https://img.20mn.fr/GfbVhSkiRBKnSS3gSbFVNSk/830x532_droit-international-peine-mettre-accord-legislations-entourant-exploitation-icebergs",
   content:
     "La présence d’eau dans notre système solaire, sous forme de vapeur ou de glace, est démontrée et communiquée depuis longtemps par les scientifiques. Mais saviez-vous qu’il y avait aussi de l’eau liquide ?",
-  date: {
-    day: 1,
-    month: 12,
-    year: 2022,
-    time: "07h02",
-  },
+  date: new Date("2022-12-01 07:02"),
   author: {
     name: "Frederic",
     lastname: "Brenon",
@@ -94,22 +72,12 @@ const article4 = {
   illustration: "https://img.20mn.fr/zOtBzBZPQdOu-_ws4djC8ik/1200x768_le-lac",
   content:
     "Pour la huitième fois cette année, la préfecture des Alpes-Maritimes reconduit un arrêté avec des restrictions d’eau jusqu’au 15 décembre à cause de la situation de « sécheresse exceptionnelle » qui touche le département depuis le mois de mars.",
-  date: {
-    day: 18,
-    month: 11,
-    year: 2022,
-    time: "16h13",
-  },
+  date: new Date("2022-11-18 16:13"),
   author: {
     name: "Elise",
     lastName: "Martin",
   },
-  updateDate: {
-    day: 18,
-    month: 11,
-    year: 2022,
-    time: "17h28",
-  },
+  updateDate: new Date("2022-11-18 17:28"),
 };
 
 const article5 = {
@@ -119,12 +87,7 @@ const article5 = {
     "https://img.20mn.fr/PlHbi1WlTcaK-EiIPCmBQA/830x532_astronaute-charles-duke-jr-rover-lunaire-1972",
   content:
     "Le premier pas de l’homme sur la Lune, les aventures de notre héros Thomas Pesquet, ou encore les rêves fous d’ Elon Musk… Quand il s’agit de parler de notre galaxie et de toutes les possibilités qui s’offrent à nous, on a bien souvent des étoiles dans les yeux.",
-  date: {
-    day: 13,
-    month: 6,
-    year: 2022,
-    time: "15h35",
-  },
+  date: new Date("2022-06-13 15:35"),
   author: {
     name: "Anna",
     lastname: "Geslin",
