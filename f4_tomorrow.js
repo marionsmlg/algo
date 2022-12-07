@@ -28,8 +28,7 @@ function getDateOfTomorrow(dateOfToday) {
   const month = currentDate.getMonth();
   const year = currentDate.getFullYear();
 
-  const dateOfTomorrow =
-    addZero(dayOfMonth) + "-" + addZero(month + 1) + "-" + year;
+  const dateOfTomorrow = `${addZero(dayOfMonth)}-${addZero(month + 1)}-${year}`;
 
   return dateOfTomorrow;
 }
