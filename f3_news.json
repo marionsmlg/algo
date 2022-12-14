@@ -4,7 +4,10 @@
 		"illustration": "https://img.20mn.fr/yMKxQU0oSVu24XkAY9t9DSk/830x532_la-picoxystrobine-interdite-en-2017-represente-pres-de-40-de-ce-volume-photo-d-illustration",
 		"content": "Il y aurait de nombreuses « failles » dans les lois. La France a autorisé entre janvier et septembre 2022 l’exportation de près de 7.500 tonnes de pesticides interdits sur le territoire français, selon une enquête de deux ONG publiée ce mercredi. ",
 		"date": "2022-11-30T19:33:00.000Z",
-		"author": "20 Minutes avec AFP",
+		"author": {
+			"name": "20 Minutes avec AFP",
+			"lastName": null
+		},
 		"updateDate": "2022-11-30T19:39:00.000Z"
 	},
 	{
@@ -25,8 +28,9 @@
 		"date": "2022-12-01T06:02:00.000Z",
 		"author": {
 			"name": "Frederic",
-			"lastname": "Brenon"
-		}
+			"lastName": "Brenon"
+		},
+		"updateDate": null
 	},
 	{
 		"title": "Sécheresse dans les Alpes-Maritimes : Les mesures de restrictions d’eau prolongées jusqu’au 15 décembre",
@@ -46,7 +50,8 @@
 		"date": "2022-06-13T13:35:00.000Z",
 		"author": {
 			"name": "Anna",
-			"lastname": "Geslin"
-		}
+			"lastName": "Geslin"
+		},
+		"updateDate": null
 	}
 ]

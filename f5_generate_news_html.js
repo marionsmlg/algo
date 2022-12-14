@@ -94,7 +94,7 @@ fs.readFile("f3_news.json", "utf8", function (err, data) {
             arrOfArticles[i].date
           )} — Mis à jour ${getDateAndTimeFormatFr(
             arrOfArticles[i].updateDate
-          )} `,
+          )}`,
           "div"
         ) +
         "\n" +

@@ -34,7 +34,10 @@ const article1 = {
   content:
     "Il y aurait de nombreuses « failles » dans les lois. La France a autorisé entre janvier et septembre 2022 l’exportation de près de 7.500 tonnes de pesticides interdits sur le territoire français, selon une enquête de deux ONG publiée ce mercredi. ",
   date: new Date("2022-11-30 20:33"),
-  author: "20 Minutes avec AFP",
+  author: {
+    name: "20 Minutes avec AFP",
+    lastName: null,
+  },
   updateDate: new Date("2022-11-30 20:39"),
 };
 
@@ -62,8 +65,9 @@ const article3 = {
   date: new Date("2022-12-01 07:02"),
   author: {
     name: "Frederic",
-    lastname: "Brenon",
+    lastName: "Brenon",
   },
+  updateDate: null,
 };
 
 const article4 = {
@@ -90,8 +94,9 @@ const article5 = {
   date: new Date("2022-06-13 15:35"),
   author: {
     name: "Anna",
-    lastname: "Geslin",
+    lastName: "Geslin",
   },
+  updateDate: null,
 };
 
 const arrOfArticles = [article1, article2, article3, article4, article5];
